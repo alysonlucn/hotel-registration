@@ -1,11 +1,11 @@
 import express from "express";
+import clientRoutes from "./routes/client.routes";
 
 const app = express();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("API do Hotel funcionando!");
-});
+
+app.use("/clients", clientRoutes);
 
 export default app;
