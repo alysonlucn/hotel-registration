@@ -11,7 +11,10 @@ export class Client {
 
     @Column({ unique: true })
     cpf!: string;
-    
+
+    @Column()
+    phone!: string;
+
     @OneToOne(() => Address, (address) => address.client, {
         cascade: true,
     })
